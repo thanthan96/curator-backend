@@ -11,7 +11,7 @@ const { PrismaClient } = pkg;
 // If your URL starts with mysql://, the adapter handles it.
 const adapter = new PrismaMariaDb(databaseUrl);
 
-const globalForPrisma = global as unknown as { prisma: PrismaClient };
+const globalForPrisma = global as unknown as { prisma: typeof PrismaClient };
 
 export const prisma =
   globalForPrisma.prisma ||
