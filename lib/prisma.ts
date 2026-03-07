@@ -1,9 +1,11 @@
 // lib/prisma.ts
-import { PrismaClient } from "@prisma/client";
+import pkg from "@prisma/client";
 import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 import "dotenv/config";
 
 const databaseUrl = process.env.DATABASE_URL as string;
+
+const { PrismaClient } = pkg;
 
 // In Prisma 7, you can pass the string directly.
 // If your URL starts with mysql://, the adapter handles it.
