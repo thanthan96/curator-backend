@@ -12,5 +12,10 @@
   "devDependencies": {
     "@types/node": "^25.3.3",
     "prisma": "^7.4.2"
+  },
+  "scripts": {
+    "build": "prisma generate",
+    "start": "node index.js",
+    "dev": "tsx index.js"
   }
 }
